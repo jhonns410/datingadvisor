@@ -1,0 +1,128 @@
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 450px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.chat-header {
+    padding: 5px 10px; /* Reduced size */
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 14px; /* Reduced size */
+}
+
+.close-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px; /* Reduced size */
+    padding: 5px; /* Added padding */
+}
+
+.chat-content {
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.chat-content p {
+    background-color: #F6F6F6;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-content p:nth-child(odd) {
+    background-color: #EAEAEA;
+}
+
+.chat-content p:last-child {
+    margin-bottom: 0;
+}
+
+.chat-form {
+    padding: 10px;
+    display: flex;
+    animation: slide-up 0.5s ease-in-out forwards;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    width: 95%; /* Set the width to 100% */
+}
+
+/* Rest of the CSS code */
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.chat-form input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    animation: fade-in 0.5s ease-in-out forwards;
+    width: 100%; /* Set the width to 100% */
+}
+
+.chat-form button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    animation: fade-in 0.5s ease-in-out forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

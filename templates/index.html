@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dating Advisor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <button class="chat-button" onclick="openChat()">Chat</button>
+
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header ">
+            <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="Logo">
+            <h5> I'm the Dating Advisor</h5>
+            <button class="close-button" onclick="closeChat()">Close</button>
+        </div>
+        <div class="chat-content" id="chatContent">
+        </div>
+        <form class="chat-form" onsubmit="sendMessage(event)">
+            <input type="text" id="userMessageInput" placeholder="Type your message..." required>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='chat.js') }}"></script>
+</body>
+</html>
